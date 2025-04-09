@@ -254,33 +254,6 @@ button:hover::after {
     background: linear-gradient(to bottom, #666, #444);
 }
 
-#mobile-controls {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
-}
-
-#horizontal-btns {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 200px;
-}
-
-#up-btn, #down-btn, #left-btn, #right-btn {
-    width: 80px;
-    height: 80px;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 /* Game Over Overlay */
 .game-over {
     position: absolute;
@@ -428,28 +401,57 @@ button:hover::after {
     #game-container {
         padding: 15px;
         width: 95%;
+        margin: 15px auto;
     }
     
     h1 {
         font-size: 2.5rem;
+        margin-bottom: 10px;
     }
     
     #score-container {
-        font-size: 1.1rem;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        font-size: 1.2rem;
+        padding: 12px;
+        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
-    #mobile-controls {
-        display: flex;
-        margin-top: 20px;
+    #current-score, #high-score {
+        min-width: 140px;
+        text-align: center;
+    }
+    
+    #canvas-container {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    #control-buttons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    button {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 1rem;
     }
     
     .modal-content {
         width: 90%;
         min-width: 0;
         margin: 20px;
+        padding: 20px;
+    }
+    
+    .setting-group {
+        padding: 12px;
+        margin-bottom: 15px;
     }
 }
 
@@ -459,15 +461,22 @@ button:hover::after {
         font-size: 2rem;
     }
     
-    #up-btn, #down-btn, #left-btn, #right-btn {
-        width: 70px;
-        height: 70px;
-        font-size: 1.8rem;
+    #game-container {
+        padding: 10px;
+    }
+    
+    #score-container {
+        font-size: 1.1rem;
+        flex-direction: column;
+        align-items: center;
     }
     
     #control-buttons {
-        flex-wrap: wrap;
-        justify-content: center;
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        padding: 15px;
     }
 }
 
