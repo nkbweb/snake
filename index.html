@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js"></script>
+    <script src="sound.js"></script>
+    <script src="score.js"></script>
+    <script src="food.js"></script>
+    <script src="snake.js"></script>
+    <script src="game.js"></script>
+    <script src="sketch.js"></script>
+    <script>
+        window.onerror = function(msg, url, line) {
+            console.error('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + line);
+            return true;
+        };
+    </script>
+</head>
+<body>
+    <div id="game-container">
+        <div id="game-header">
+            <h1>SNAKE</h1>
+            <div id="score-container">
+                <div id="current-score">Score: <span id="score">0</span></div>
+                <div id="high-score">High Score: <span id="high">0</span></div>
+            </div>
+        </div>
+        <div id="canvas-container"></div>
+        <div id="game-controls">
+            <div id="control-buttons">
+                <button id="restart-btn">Restart Game</button>
+                <button id="mute-btn">🔊 Sound</button>
+            </div>
+            <div id="mobile-controls">
+                <button id="up-btn">↑</button>
+                <div id="horizontal-btns">
+                    <button id="left-btn">←</button>
+                    <button id="right-btn">→</button>
+                </div>
+                <button id="down-btn">↓</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
